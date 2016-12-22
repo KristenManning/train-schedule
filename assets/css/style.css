@@ -1,9 +1,10 @@
 
 body{ 
-	padding: 5%;
+	/*background-color: #7BA06C;*/
+
 }
 
-h1{
+#title_text{ opacity: 100%;
 }
 
 h2{
@@ -13,4 +14,35 @@ h3{
 }
 
 p{
+}
+
+thead{
+	background-color: #532850;
+}
+
+.title{
+	font-size: 80px;
+	line-height: 130px;
+	font-weight: bolder;
+	text-align: center;
+	background: url("../images/metro.jpg");
+	background-size: auto 100%;
+	color: white;
+	letter-spacing: 0.2em;
+	opacity: 0.2;
+
+}
+
+form{
+	background-color: #532850;
+	padding: 2%;
+	margin: 2%;
+	font-size: 20px;
+}
+
+.container{
+	background-color: #A06C9C;
+	padding: 0.5%;
+	margin: 2%;
+
 }

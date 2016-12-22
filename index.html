@@ -16,25 +16,64 @@
 </head>
 
 <body>
-  <!-- Top row: title -->
+  <div class="row title">
+    <div class="col-md-12">
+      <h1 id="title_text">TRAIN<u>tracks</u></h1>
+    </div>
+  </div>
+
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-4">
       <form>
         Train Name
         <input type="text" class="form-control" id="u_train"> 
+        <br>
         Destination
-        <input type="text" class="form-control" id="u_destination"> 
+        <input type="text" class="form-control" id="u_destination">
+        <br> 
         First Train Time (HH:mm - military time)
         <input type="text" class="form-control" id="u_first_time"> 
+        <br>
         Frequency
         <input type="text" class="form-control" id="u_frequency"> 
+        <br>
         <button class="btn btn-default" type="submit">
         Submit
         </button>
       </form>
     </div>
+
+    <div class="col-md-5 container">               
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency (trains/min)</th>
+            <th>Next Arrival</th>
+            <th>Minutes Away</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>the name</td>
+            <td>the destination</td>
+            <td>5</td>
+            <td></td>
+            <td></td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+
+
   </div>
   <br>
+
+
 
 </body>
 </html>
