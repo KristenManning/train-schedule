@@ -18,9 +18,12 @@ $(document).ready(function() {
     var destination = $("#u_destination").val();
     var first_time = $("#u_first_time").val();
     var frequency = $("#u_frequency").val();
-   
-    return false
 
+    $("tbody").append('<tr><td>'+train+'</td><td>'+destination+'</td><td>'+first_time+'</td><td>'+frequency+'</td></tr>');
+
+    return false
+    
+    
   });
   
 })       
