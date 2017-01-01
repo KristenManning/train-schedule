@@ -18,8 +18,13 @@ p{
 
 thead{
 	background-color: #532850;
+	font-size: 18px;
+	font-weight: bold;
+	margin:none;
 }
-
+th{
+	text-align: center;
+}
 .title{
 	font-size: 80px;
 	line-height: 130px;
