@@ -1,10 +1,20 @@
 
+/*reds: 531307 A0776F 6D352A A0250E EC3715 */
+
 body{ 
-	/*background-color: #7BA06C;*/
+	background-color:#1f1f1f;
+	font-family: Helvetica;
 
 }
 
-#title_text{ opacity: 100%;
+h1{
+	font-size: 100px;
+	font-weight: bolder;
+	color:  #531307; /*#A0776F;*/
+	letter-spacing: 0.1em;
+	font-family: 'Alegreya', serif;
+	opacity: 0.9;
+
 }
 
 h2{
@@ -17,7 +27,7 @@ p{
 }
 
 thead{
-	background-color: #532850;
+	background-color: #362F36;
 	font-size: 18px;
 	font-weight: bold;
 	margin:none;
@@ -25,29 +35,26 @@ thead{
 th{
 	text-align: center;
 }
-.title{
-	font-size: 80px;
-	line-height: 130px;
-	font-weight: bolder;
+#title{
 	text-align: center;
-	background: url("../images/metro.jpg");
+	background-image: url("../images/snow_train.jpeg");
 	background-size: auto 100%;
-	color: white;
-	letter-spacing: 0.2em;
-	font-family: 'Oldenburg', cursive;
-	
 }
 
 form{
-	background-color: #532850;
+	background-color: #A0776F;
 	padding: 2%;
-	margin: 2%;
+	margin: 5%;
 	font-size: 20px;
 }
 
 .container{
-	background-color: #A06C9C;
+	background-color: #A0776F;
 	padding: 0.5%;
 	margin: 2%;
 
+}
+
+.tbody{
+	text-align: center;
 }
