@@ -2,15 +2,17 @@
 $(document).ready(function() {
   
 
-  // $(document).on("click", ".btn-success", function() {
+  var config = {
+    apiKey: "AIzaSyDmb865vMlKLHHXklvpj9Qxt0MY-XCMTbc",
+    authDomain: "train-tracker-44c80.firebaseapp.com",
+    databaseURL: "https://train-tracker-44c80.firebaseio.com",
+    storageBucket: "train-tracker-44c80.appspot.com",
+    messagingSenderId: "14249277472"
+  };
 
-  //   });
+    firebase.initializeApp(config);
 
-  // When a gif is clicked, swap the data-src2 value with the img source
-  // src = still & src2 = animated --> src = animated & src2 = still, or vice versa 
-  // $(document).on("click", "img", function() {
-
-  // });
+    var database = firebase.database();
 
   // When a new emotion is submitted, add it to the emotions array and run the display buttons function again to display it  
   $(".btn-default").on("click", function() {
@@ -25,13 +27,26 @@ $(document).ready(function() {
     var min_away = frequency - (diff_in_time % frequency);
     var next_time = moment(now, "HH:mm").add(min_away, "minutes").format("HH:mm");
     
-
-
-    $("tbody").append('<tr><td>'+train+'</td><td>'+destination+'</td><td>'+frequency+'</td><td>'+next_time+'</td><td>'+min_away+'</td></tr>');
+    database.ref().push({
+        
+      train: train,
+      destination: destination,
+      next_time: next_time,
+      min_away: min_away,
+      frequency: frequency,
+    })
 
     return false
-    
-    
   });
-  
-})       
+
+  database.ref().on("value", function(snapshot) {
+    var outer_object = snapshot.val();
+    var keys_array = Object.keys(outer_object)
+    for (i in keys_array){
+      var nested_obj = outer_object[keys_array[i]]
+      $("tbody").append('<tr><td>'+nested_obj.train+'</td><td>'+nested_obj.destination+'</td><td>'+nested_obj.frequency+'</td><td>'+nested_obj.next_time+'</td><td>'+nested_obj.min_away+'</td></tr>');
+    
+    }
+    })
+  });
+     
