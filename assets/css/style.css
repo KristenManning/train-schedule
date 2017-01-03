@@ -17,15 +17,6 @@ h1{
 
 }
 
-h2{
-}
-
-h3{
-}
-
-p{
-}
-
 thead{
 	background-color: #362F36;
 	font-size: 18px;
@@ -33,6 +24,11 @@ thead{
 	margin:none;
 }
 th{
+	text-align: center;
+}
+
+td{
+	font-size:14px;
 	text-align: center;
 }
 #title{
@@ -46,12 +42,17 @@ form{
 	padding: 2%;
 	margin: 5%;
 	font-size: 20px;
+	border: solid;
+	border-color: #C0C0C0;
+
 }
 
 .container{
 	background-color: #A0776F;
 	padding: 0.5%;
 	margin: 2%;
+	border: solid;
+	border-color: #C0C0C0;
 
 }
 
