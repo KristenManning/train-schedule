@@ -40,6 +40,7 @@ $(document).ready(function() {
   });
 
   database.ref().on("value", function(snapshot) {
+    $("tbody").html("")
     var outer_object = snapshot.val();
     var keys_array = Object.keys(outer_object)
     for (i in keys_array){
@@ -48,5 +49,7 @@ $(document).ready(function() {
     
     }
     })
+
+
   });
      
